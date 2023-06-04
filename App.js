@@ -10,6 +10,8 @@ import ListRestaurantsScreen from "./screens/ListRestaurantsScreen";
 import MenuOrderedScreen from "./screens/MenuOrderedScreen";
 import CategoryScreen from "./screens/CategoryScreen";
 import CheckoutScreen from "./screens/CheckoutScreen";
+import SuccessScreen from "./screens/SuccessScreen";
+import FeedbackScreen from "./screens/FeedbackScreen";
 
 const navigator = createStackNavigator({
   Home: {
@@ -50,6 +52,18 @@ const navigator = createStackNavigator({
   },
   Category: {
     screen: CategoryScreen,
+    navigationOptions: {
+      headerShown: false
+    }
+  },
+  Success: {
+    screen: SuccessScreen,
+    navigationOptions: {
+      headerShown: false
+    }
+  },
+  Feedback: {
+    screen: FeedbackScreen,
     navigationOptions: {
       headerShown: false
     }
