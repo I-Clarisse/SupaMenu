@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { TextInput, View, StyleSheet, Text } from "react-native";
 import CustomButton from "../components/CustomButton";
-import LinkText from "../components/LinkText";
 
 const SignupScreen = ({navigation}) => {
 
@@ -37,6 +36,7 @@ const SignupScreen = ({navigation}) => {
                 value={fullName}
                 onChange={handleFullNameChange}
             />
+
             <TextInput 
                 style={styles.input}
                 placeholder="Password"
@@ -54,7 +54,7 @@ const SignupScreen = ({navigation}) => {
             <Text style={styles.grayText}>If you have a PMG account</Text>
             <CustomButton title="Sign In" onPress = {() => navigation.navigate('Login')}/>
             <Text style={styles.register}>
-                Don't have account? <Text style={styles.spanText} onPress = {() => navigation.navigate('Signup')}>Register</Text>
+                Already have account? <Text style={styles.spanText} onPress = {() => navigation.navigate('Login')}>Login</Text>        
             </Text>
         </View>
     </View>
